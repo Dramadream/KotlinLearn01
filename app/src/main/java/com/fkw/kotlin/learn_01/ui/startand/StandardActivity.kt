@@ -22,8 +22,8 @@ class StandardActivity : BaseActivity() {
         // val result = with(recevicer, { })
         // val result = with(recevicer) { }
 
-
         traditionFun()
+
         // with函数，两个参数，第一个参数是lambda表达式的上下文，Lambda表达式最后一行是返回值
         withFun()
         // run函数，一个参数，调用者是lambda表达式的上下文，Lambda表达式最后一行是返回值

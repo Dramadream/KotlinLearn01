@@ -11,6 +11,7 @@ import com.fkw.kotlin.learn_01.ui.static.Util
 import com.fkw.kotlin.learn_01.ui.static.Util2
 import com.fkw.kotlin.learn_01.ui.static.doAction3
 import com.fkw.kotlin.learn_01.ui.static.param3
+import com.fkw.kotlin.learn_01.ui.uitest.UiTestActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -25,11 +26,10 @@ class MainActivity : BaseActivity() {
         btn_standard_fun_with.setOnClickListener {
             startActivity(Intent(this, StandardActivity::class.java))
         }
-        Util.param1
-        Util.doAction1()
-        Util2.param2
-        Util2.doAction2()
-        doAction3()
-        param3
+
+        btn_ui_test.setOnClickListener {
+            startActivity(Intent(this, UiTestActivity::class.java))
+        }
+
     }
 }
