@@ -4,9 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.ToastUtils
 import com.fkw.kotlin.learn_01.R
+import com.fkw.kotlin.learn_01.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_list.*
 
-class ListActivity : AppCompatActivity() {
+class ListActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
