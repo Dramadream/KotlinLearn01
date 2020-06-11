@@ -1,11 +1,13 @@
 package com.fkw.kotlin.learn_01.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.blankj.utilcode.util.LogUtils
 import com.fkw.kotlin.learn_01.R
 import com.fkw.kotlin.learn_01.base.BaseActivity
 import com.fkw.kotlin.learn_01.ui.activitylifecycle.LifeCycleActivity
+import com.fkw.kotlin.learn_01.ui.frag.NewsActivity
 import com.fkw.kotlin.learn_01.ui.list.ListActivity
 import com.fkw.kotlin.learn_01.ui.list.RecyclerActivity
 import com.fkw.kotlin.learn_01.ui.list.wechat.WeChatActivity
@@ -33,7 +35,8 @@ class MainActivity : BaseActivity() {
         }
 
         btnListView.setOnClickListener {
-            startActivity(Intent(this, ListActivity::class.java))
+            val java: Class<out Activity> = ListActivity::class.java
+            startActivity(Intent(this, java))
         }
 
         btnRecyclerView.setOnClickListener {
@@ -42,6 +45,10 @@ class MainActivity : BaseActivity() {
 
         btnWeChat.setOnClickListener {
             startActivity(Intent(this, WeChatActivity::class.java))
+        }
+
+        btn_frag.setOnClickListener {
+            startActivity(Intent(this, NewsActivity::class.java))
         }
 
     }

@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.list.wechat.WeChatActivity" />
+        <activity android:name=".ui.frag.NewsActivity" />
         <activity android:name=".ui.list.RecyclerActivity" />
+        <activity android:name=".ui.list.wechat.WeChatActivity" />
         <activity android:name=".ui.list.ListActivity" />
         <activity android:name=".ui.uitest.UiTestActivity" />
         <activity android:name=".ui.startand.StandardActivity" />
