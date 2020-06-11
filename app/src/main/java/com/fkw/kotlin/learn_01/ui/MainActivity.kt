@@ -3,7 +3,6 @@ package com.fkw.kotlin.learn_01.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.blankj.utilcode.util.LogUtils
 import com.fkw.kotlin.learn_01.R
 import com.fkw.kotlin.learn_01.base.BaseActivity
 import com.fkw.kotlin.learn_01.ui.activitylifecycle.LifeCycleActivity
@@ -19,38 +18,19 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        LogUtils.i("onCreate")
 
+        btn_activity_life_cycle.setOnClickListener { jump(LifeCycleActivity::class.java) }
+        btn_standard_fun_with.setOnClickListener { jump(StandardActivity::class.java) }
+        btn_ui_test.setOnClickListener { jump(UiTestActivity::class.java) }
+        btnListView.setOnClickListener { jump(ListActivity::class.java) }
+        btnRecyclerView.setOnClickListener { jump(RecyclerActivity::class.java) }
+        btnWeChat.setOnClickListener { jump(WeChatActivity::class.java) }
+        btn_frag.setOnClickListener { jump(NewsActivity::class.java) }
 
-        btn_activity_life_cycle.setOnClickListener {
-            startActivity(Intent(this, LifeCycleActivity::class.java))
-        }
+    }
 
-        btn_standard_fun_with.setOnClickListener {
-            startActivity(Intent(this, StandardActivity::class.java))
-        }
-
-        btn_ui_test.setOnClickListener {
-            startActivity(Intent(this, UiTestActivity::class.java))
-        }
-
-        btnListView.setOnClickListener {
-            val java: Class<out Activity> = ListActivity::class.java
-            startActivity(Intent(this, java))
-        }
-
-        btnRecyclerView.setOnClickListener {
-            startActivity(Intent(this, RecyclerActivity::class.java))
-        }
-
-        btnWeChat.setOnClickListener {
-            startActivity(Intent(this, WeChatActivity::class.java))
-        }
-
-        btn_frag.setOnClickListener {
-            startActivity(Intent(this, NewsActivity::class.java))
-        }
-
+    private fun jump(clz: Class<out Activity>) {
+        startActivity(Intent(this, clz))
     }
 
 
