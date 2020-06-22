@@ -15,15 +15,48 @@ fun main() {
     //golbalscope()
     //runblock()
     //testLaunch()
-    highConcurrency()
+    //highConcurrency()
     /*runBlocking {
         testSuspend()
     }*/
     //job1()
     //testAsync()
     //testWithContext()
+    //testRunBlocking2()
+    job2()
 }
 
+fun job2() {
+
+    val job = Job()
+    val scope = CoroutineScope(job)
+    scope.launch {
+        repeat(1000) { i ->
+            println("job: I'm sleeping $i ...")
+            delay(400)
+        }
+    }
+
+}
+
+fun testRunBlocking2() = runBlocking { // this: CoroutineScope
+    launch {
+        delay(200L)
+        println("Task from runBlocking")
+    }
+
+    coroutineScope { // 创建一个协程作用域
+        launch {
+            delay(500L)
+            println("Task from nested launch")
+        }
+
+        delay(100L)
+        println("Task from coroutine scope") // 这一行会在内嵌 launch 之前输出
+    }
+
+    println("Coroutine scope is over") // 这一行在内嵌 launch 执行完毕后才输出
+}
 
 suspend fun <T> Call<T>.await(): T {
     return suspendCoroutine { continuation ->
@@ -40,7 +73,6 @@ suspend fun <T> Call<T>.await(): T {
         })
     }
 }
-
 
 
 fun testWithContext() {
