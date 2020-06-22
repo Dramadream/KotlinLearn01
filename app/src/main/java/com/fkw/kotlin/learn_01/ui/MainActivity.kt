@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.fkw.kotlin.learn_01.R
 import com.fkw.kotlin.learn_01.base.BaseActivity
+import com.fkw.kotlin.learn_01.ui._07storage.file.FileReadWriteActivity
 import com.fkw.kotlin.learn_01.ui.activitylifecycle.LifeCycleActivity
 import com.fkw.kotlin.learn_01.ui.frag.NewsActivity
 import com.fkw.kotlin.learn_01.ui.list.ListActivity
@@ -26,6 +27,7 @@ class MainActivity : BaseActivity() {
         btnRecyclerView.setOnClickListener { jump(RecyclerActivity::class.java) }
         btnWeChat.setOnClickListener { jump(WeChatActivity::class.java) }
         btn_frag.setOnClickListener { jump(NewsActivity::class.java) }
+        btn_storage_file.setOnClickListener { jump(FileReadWriteActivity::class.java) }
 
     }
 

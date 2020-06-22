@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="RecyclerView"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btnWeChat"
                 android:layout_width="wrap_content"
@@ -64,6 +65,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fragment"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_storage_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Storage----File"
                 android:textAllCaps="false" />
 
         </LinearLayout>
