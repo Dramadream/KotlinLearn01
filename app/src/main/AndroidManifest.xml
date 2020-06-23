@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui._07storage.sp.SpActivity"></activity>
+        <activity android:name=".ui.coroutine.PracticeActivity1"></activity>
+        <activity android:name=".ui._07storage.sp.SpActivity" />
         <activity android:name=".ui._07storage.file.FileReadWriteActivity" />
         <activity android:name=".ui.frag.NewsContentActivity" />
         <activity android:name=".ui.frag.NewsActivity" />

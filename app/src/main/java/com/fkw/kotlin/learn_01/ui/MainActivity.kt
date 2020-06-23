@@ -7,6 +7,7 @@ import com.fkw.kotlin.learn_01.R
 import com.fkw.kotlin.learn_01.base.BaseActivity
 import com.fkw.kotlin.learn_01.ui._07storage.file.FileReadWriteActivity
 import com.fkw.kotlin.learn_01.ui.activitylifecycle.LifeCycleActivity
+import com.fkw.kotlin.learn_01.ui.coroutine.PracticeActivity1
 import com.fkw.kotlin.learn_01.ui.frag.NewsActivity
 import com.fkw.kotlin.learn_01.ui.list.ListActivity
 import com.fkw.kotlin.learn_01.ui.list.RecyclerActivity
@@ -28,6 +29,7 @@ class MainActivity : BaseActivity() {
         btnWeChat.setOnClickListener { jump(WeChatActivity::class.java) }
         btn_frag.setOnClickListener { jump(NewsActivity::class.java) }
         btn_storage_file.setOnClickListener { jump(FileReadWriteActivity::class.java) }
+        btn_coroutine_pratice1.setOnClickListener { jump(PracticeActivity1::class.java) }
 
     }
 
